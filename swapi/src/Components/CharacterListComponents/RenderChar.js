@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
-let characterlist = [];
-
 const RenderChar = (list) => {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        characterlist = [];
         list.data.forEach(element => {
             fetch(element)
                 .then((res) => res.json())
@@ -21,8 +18,6 @@ const RenderChar = (list) => {
         if (x > y) {return 1;}
         return 0;
       });
-
-
 
     return (
         <>
